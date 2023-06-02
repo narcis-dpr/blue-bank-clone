@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -56,6 +58,7 @@ dependencies {
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material:material:1.4.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -63,4 +66,41 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+    implementation("io.coil-kt:coil:2.4.0")
+
+
+    // dependency injection
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    kapt "com.google.dagger:hilt-android-compiler:2.44"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    //compose
+    implementation "androidx.navigation:navigation-compose:2.5.1"
+    debugImplementation "androidx.compose.ui:ui-tooling:1.2.1"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.2.1"
+    implementation "com.google.accompanist:accompanist-permissions:0.23.1"
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    implementation 'com.google.accompanist:accompanist-swiperefresh:0.15.0'
+    implementation "androidx.compose.runtime:runtime-livedata:1.2.1"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.2.0-beta02"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:1.2.0-beta02"
+    implementation "androidx.compose.ui:ui:1.2.1"
+    implementation "androidx.compose.material:material-icons-extended:1.1.0"
+    implementation "com.google.maps.android:maps-compose:1.0.0"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+//    implementation "com.squareup.retrofit2:converter-jackson:2.9.0"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.5.0'
+    implementation('com.github.ihsanbal:LoggingInterceptor:3.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation "com.github.javaherisaber.MockFit:runtime:1.1.0"
+    kapt "com.github.javaherisaber.MockFit:compiler:1.1.0"
+    // Room
+    implementation "androidx.room:room-runtime:2.4.1"
+    kapt "androidx.room:room-compiler:2.4.1"
+    // Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:2.4.1"
 }
