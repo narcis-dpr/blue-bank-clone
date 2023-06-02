@@ -28,10 +28,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.blueapplication.R
 import com.example.blueapplication.ui.theme.BlueApplicationTheme
 
@@ -64,8 +68,9 @@ fun TopCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "۷۸,۵۰۰,۰۰۰ ",
-                style = MaterialTheme.typography.titleLarge,
+                text = "۹۳,۹۸۷,۹۱۲ ریال",
+                style = TextStyle(textDirection = TextDirection.ContentOrRtl),
+                fontSize =  24.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
             )
